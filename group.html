@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="site-navbar">
+        <div class="navbar__wrap">
+            <div class="container">
+                <div class="navbar__herader">
+                    <a class="logo" href="./index.html">
+                        <img class="logo-img" src="./images/logo.svg" alt="">
+                    </a>
+                    <button class="navbar__btn"></button>
+                </div>
+            </div>
+            <div class="navbar__body">
+                <nav class="navbar__navigation">
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a class="navbar__link" href="./index.html">Xisobot</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--pupil" href="./students.html">O’quvchilar</a>
+                        </li>
+                        <li class="navbar__item active">
+                            <a class="navbar__link navbar__link--group " href="./group.html">Guruhlar</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--teachers" href="./teachers.html">O’qtuvchilar</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--subjects" href="./subjects.html">Fanlar</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="site-body">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header__wrap">
+                    <h1 class="site-header__title">Guruhlar</h1>
+                </div>
+            </div>
+        </header>
+        <main class="site-main__group group">
+            <div class="container">
+                <div class="group__wrap">
+                    <h2 class="students__title">Yangi guruh qo’shish</h2>
+                    <form class="students__add-form js-add-group-form">
+                        <label class="students__form-label">
+                            Guruh yo'nalishi
+                            <select class="studdents__group js-all-subjects" name="group" required aria-label="sellect group">
+                                <option class="students__option" disabled hidden selected>Group</option>
+                            </select>
+                        </label>
+                        <label class="students__form-label">
+                            Dars kunlari                            
+                            <select class=" students__form-inp js-group-day">
+                            </select>
+                        </label>
+                        <label class="students__form-label">
+                            Dars boshlanishi vaqti
+                            <input class="students__form-inp js-group-start-time" type="time" name="student_teacher_name" aria-label="nter lesson start time" required>
+                        </label>
+                        <label class="students__form-label">
+                            Dars tugash vaqti
+                            <input class="students__form-inp js-group-end-time" type="time" name="teacher_phone" aria-label="enter lesson end time" required>
+                        </label>                        
+                        <label class="students__form-label">
+                            O’qituvchi
+                            <select class="studdents__group js-all-tachers" name="group" required aria-label="sellect group">
+                                <option class="students__option" disabled hidden selected>Group</option>
+                            </select>
+                        </label>
+                        <label class="students__form-label">
+                            Guruh nomi
+                            <input class="students__form-inp js-add-group" type="text" name="group_name" placeholder="group_name" aria-label="enter group name" required>
+                        </label>
+                        <button class="subject__add-btn teachers__add-btn" type="submit">Qo'shish</button>
+                    </form>
+                    <h2 class="students__title js-group-title">Mavjud guruhlar</h2>
+                    <ul class="group__all-gruop-list">
+                       <template class="group__group-card-template">
+                        <li class="group__item">
+                            <div class="group__item-header">
+                                <strong class="group__item-title">Matemetika</strong>
+                            </div>
+                            <div class="group__item-teacher-wrap">
+                                <img class="group__item-teacher-img" src="./images/address-book-solid.png" alt="">
+                                <div class="group__item-inner">
+                                    <span class="group__item-info "><strong>O'qituvchi:</strong><span class="js-teacher-name">Ulug'bek Muqimjonov</span></span>
+                                    <span class="group__item-info "><strong>Telefon raqami:</strong><span class="js-tacher-tel">123456789</span></span>
+                                </div>
+                            </div>
+                            <ul class="group__item-innerList">
+                                <li class="group__innerItem">
+                                    <strong class="group__innerItem-bold">Guruh yo'nalishi:</strong>
+                                    <span class="gruop__inneritem-info js-group-subject">React</span>
+                                </li>
+                                <li class="group__innerItem">
+                                    <strong class="group__innerItem-bold">Dars kunlari:</strong>
+                                    <span class="gruop__inneritem-info js-lesson-day">DU_SE_CHO</span>
+                                </li>
+                                <li class="group__innerItem">
+                                    <strong class="group__innerItem-bold">Dars vaqtlari:</strong>
+                                    <span class="gruop__inneritem-info js-lesson-time">16:30-18:30</span>
+                                </li>
+                                <li class="group__innerItem">
+                                    <strong class="group__innerItem-bold">O’quvchilar soni:</strong>
+                                    <span class="gruop__inneritem-info js-students-count">25ta</span>
+                                </li>
+                            </ul>
+                            <div class="group__item-btnwrap">
+                                <lord-icon
+                                src="https://cdn.lordicon.com/zfzufhzk.json"
+                                trigger="hover"
+                                state="hover-line"
+                                class="js-edit-group"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                                data-bs-whatever="@getbootstrap"
+                              >
+                              </lord-icon>
+                              <lord-icon
+                                class="js-delet-group"
+                                src="https://cdn.lordicon.com/xekbkxul.json"
+                                trigger="click"
+                                state="morph-trash-in"
+                              >
+                              </lord-icon>
+                            </div>
+                        </li>
+                       </template>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+<!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">EDIT GROUP:</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="modal-form js-group-edit-modal">
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Group name:</label>
+                  <input type="text" class="form-control js-group-name" id="recipient-name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Start time:</label>
+                    <input class=" form-control js-gruop-start" type="time" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">End time:</label>
+                      <input class=" form-control js-user-age" type="time" required>
+                  </div>
+                  <button class="btn js-modal-btn" type="submit" data-bs-dismiss="modal">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/group.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subjects</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="site-navbar">
+      <div class="navbar__wrap">
+        <div class="container">
+          <div class="navbar__herader">
+            <a class="logo" href="./index.html">
+              <img class="logo-img" src="./images/logo.svg" alt="" />
+            </a>
+            <button class="navbar__btn"></button>
+          </div>
+        </div>
+        <div class="navbar__body">
+          <nav class="navbar__navigation">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a class="navbar__link" href="./index.html">Xisobot</a>
+              </li>
+              <li class="navbar__item">
+                <a
+                  class="navbar__link navbar__link--pupil"
+                  href="./students.html"
+                  >O’quvchilar</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__link navbar__link--group" href="./group.html"
+                  >Guruhlar</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a
+                  class="navbar__link navbar__link--teachers"
+                  href="./teachers.html"
+                  >O’qtuvchilar</a
+                >
+              </li>
+              <li class="navbar__item active">
+                <a
+                  class="navbar__link navbar__link--subjects"
+                  href="./subjects.html"
+                  >Fanlar</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="site-body">
+      <header class="site-header">
+        <div class="container">
+          <div class="site-header__wrap">
+            <h1 class="site-header__title">Fanlar</h1>
+          </div>
+        </div>
+      </header>
+      <main class="site-main__subjects subjects">
+        <div class="container">
+          <div class="subjects__wrap">
+            <h2 class="students__title">Yangi fan qo’shish</h2>
+            <form class="subjects__add-from">
+              <label class="subjects__add-label">
+                Fan nomi
+                <input
+                  class="subjects__add-form-inp js-subject"
+                  type="text"
+                  name="subject"
+                  placeholder="Fan qo'shish"
+                  aria-label="add subject"
+                  required
+                />
+              </label>
+              <button class="subject__add-btn" type="submit">Qo'shish</button>
+            </form>
+            <h3 class="students__title js-subject-title">Barcha fanlar</h3>
+            <table class="subjects__table">
+              <thead class="subjects__tabel-head">
+                <tr class="subjects__tabel-row subjects__tabel-head-row">
+                  <th class="subjects__tabel-head-coloumn">№</th>
+                  <th class="subjects__tabel-coloumn">Fan nomi</th>
+                </tr>
+              </thead>
+              <tbody class="subjects__tabel-body">
+                <template class="subjects__temp">
+                  <tr class="subjects__tabel-row">
+                    <td class="subjects__tabel-coloumn js-subjects-id">1</td>
+                    <td class="subjects__tabel-coloumn js-subjects">
+                      <span class="subjects__tabel-subject"></span>
+                      <div class="subjects__tabel-btnWrap">
+                        <lord-icon
+                          src="https://cdn.lordicon.com/zfzufhzk.json"
+                          trigger="hover"
+                          state="hover-line"
+                          class="subjects__tabel-editbtn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                          data-bs-whatever="@getbootstrap"
+                        >
+                        </lord-icon>
+                        <lord-icon
+                          class="subjects__tabel-delbtn"
+                          src="https://cdn.lordicon.com/xekbkxul.json"
+                          trigger="click"
+                          state="morph-trash-in"
+                        >
+                        </lord-icon>
+                      </div>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                New subject
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="js-modal-subject">
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label"
+                    >Subject:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control js-subject"
+                    id="recipient-name"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary js-modal-btn"
+                  data-bs-dismiss="modal"
+                >
+                  Send message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
+      <script src="./js/functions.js"></script>
+      <script src="./js/subjects.js"></script>
+    </div>
+  </body>
+</html>

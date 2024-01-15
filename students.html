@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="site-navbar">
+      <div class="navbar__wrap">
+        <div class="container">
+          <div class="navbar__herader">
+            <a class="logo" href="./index.html">
+              <img class="logo-img" src="./images/logo.svg" alt="" />
+            </a>
+            <button class="navbar__btn"></button>
+          </div>
+        </div>
+        <div class="navbar__body">
+          <nav class="navbar__navigation">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a class="navbar__link" href="./index.html">Xisobot</a>
+              </li>
+              <li class="navbar__item active">
+                <a
+                  class="navbar__link navbar__link--pupil"
+                  href="./students.html"
+                  >O’quvchilar</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a class="navbar__link navbar__link--group" href="./group.html"
+                  >Guruhlar</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a
+                  class="navbar__link navbar__link--teachers"
+                  href="./teachers.html"
+                  >O’qtuvchilar</a
+                >
+              </li>
+              <li class="navbar__item">
+                <a
+                  class="navbar__link navbar__link--subjects"
+                  href="./subjects.html"
+                  >Fanlar</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="site-body">
+      <header class="site-header">
+        <div class="container">
+          <div class="site-header__wrap">
+            <h1 class="site-header__title">O’quvchilar</h1>
+          </div>
+        </div>
+      </header>
+      <main class="site-main">
+        <section class="site-main__students students">
+          <div class="container">
+            <div class="students__wrap">
+              <h2 class="students__title">Yangi o’quvchi qo’shish</h2>
+              <form class="students__add-form">
+                <label class="students__form-label">
+                  O’quvchi ismi
+                  <input
+                    class="students__form-inp js-sutdent-name"
+                    type="text"
+                    name="student_name"
+                    placeholder="Name"
+                    aria-label="enter student  name"
+                    required
+                  />
+                </label>
+                <label class="students__form-label">
+                  O’quvchi familyasi
+                  <input
+                    class="students__form-inp js-sutdent-surname"
+                    type="text"
+                    name="student_surname"
+                    placeholder="Surame"
+                    aria-label="enter student  surname"
+                    required
+                  />
+                </label>
+                <label class="students__form-label">
+                  Telefon raqami
+                  <input
+                    class="students__form-inp js-sutdent-number"
+                    type="tel"
+                    name="student_phone"
+                    placeholder="phone"
+                    aria-label="enter student  phone"
+                    required
+                  />
+                </label>
+                <label class="students__form-label">
+                  Ota-onasi ismi
+                  <input
+                    class="students__form-inp js-sutdent-parent-name"
+                    type="text"
+                    name="student_parent-name"
+                    placeholder="Parent name"
+                    aria-label="enter student parent name"
+                    required
+                  />
+                </label>
+                <label class="students__form-label">
+                  Ota onasi nomeri
+                  <input
+                    class="students__form-inp js-sutdent-parent-phone"
+                    type="tel"
+                    name="student_parent-phone"
+                    placeholder="parent phone"
+                    aria-label="enter student  parent phone"
+                    maxlength="9"
+                    minlength="9"
+                    required
+                  />
+                </label>
+                <label class="students__form-label">
+                  Guruh
+                  <select
+                    class="studdents__group js-all-group"
+                    name="student_group"
+                    required
+                    aria-label="sellect student group"
+                    required
+                  >
+                    <option class="students__option" disabled hidden selected>
+                      Group
+                    </option>
+                  </select>
+                </label>
+                <label class="students__form-label">
+                  O’quvchi yoshi
+                  <input
+                    class="students__form-inp js-sutdent-age"
+                    type="number"
+                    name="student_age"
+                    placeholder="oquvchini yoshi"
+                    aria-label="enter student  age"
+                    min="1"
+                    required
+                  />
+                </label>
+                <button class="subject__add-btn" type="submit">Qo'shish</button>
+              </form>
+              <div class="students__tabel-title">
+                <h2 class="students__title js-students-title">
+                  Bizning o’quvchilar
+                </h2>
+                <input
+                  class="search-inp js-search-students"
+                  type="search"
+                  name="user_search_group"
+                  placeholder="name"
+                  aria-label="enter your search group name"
+                />
+              </div>
+              <table class="sutdents__tabel">
+                <thead class="students__tabel-head">
+                  <tr class="sutdents__tabel-th-row">
+                    <th class="students__tabel-title">№</th>
+                    <th class="students__tabel-title">O’quvchi ismi</th>
+                    <th class="students__tabel-title">Telefon nomer</th>
+                    <th class="students__tabel-title">Yo’nalish</th>
+                    <th class="students__tabel-title">Ota-ona(F.I.SH)</th>
+                    <th
+                      class="students__tabel-title students__tabel-head-parent-tel"
+                    >
+                      Ota-ona (Tel)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="students__tabel-body">
+                  <template class="students__tabel-temp">
+                    <tr class="students__tabel-trow">
+                      <td class="students__tabel-data js-student-id">1</td>
+                      <td class="students__tabel-data js-sutudent-name">
+                        name
+                      </td>
+                      <td class="students__tabel-data js-student-tel">
+                        123456789
+                      </td>
+                      <td class="students__tabel-data js-student-subject">
+                        matka
+                      </td>
+                      <td class="students__tabel-data js-student-parent-name">
+                        Umidjon
+                      </td>
+                      <td
+                        class="students__tabel-data students__tabel-parent-tel students__tabel-parent-tel-wrap"
+                      >
+                        <span class="js-student-parent-tel">1234566789</span>
+                        <div class="students__tabel-btnwrap">
+                          <lord-icon
+                            src="https://cdn.lordicon.com/zfzufhzk.json"
+                            trigger="hover"
+                            state="hover-line"
+                            class="js-student-edit-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            data-bs-whatever="@getbootstrap"
+                          >
+                          </lord-icon>
+                          <lord-icon
+                            class="js-student-del-btn"
+                            src="https://cdn.lordicon.com/xekbkxul.json"
+                            trigger="click"
+                            state="morph-trash-in"
+                          >
+                          </lord-icon>
+                        </div>
+                      </td>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- moda -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                EDIT STUDENT:
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form class="modal-form">
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label"
+                    >Name:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control js-user-name"
+                    id="recipient-name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label"
+                    >Last name:</label
+                  >
+                  <input
+                    class="form-control js-user-lastname"
+                    type="text"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Age:</label>
+                  <input
+                    class="form-control js-user-age"
+                    type="number"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label"
+                    >Phone number:</label
+                  >
+                  <input
+                    class="form-control js-user-phone-number"
+                    type="tel"
+                    required
+                  />
+                </div>
+                <button
+                  class="btn js-modal-btn"
+                  type="submit"
+                  data-bs-dismiss="modal"
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="site-footer"></footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
+      <script src="./js/functions.js"></script>
+      <script src="./js/sutudents.js"></script>
+    </div>
+  </body>
+</html>

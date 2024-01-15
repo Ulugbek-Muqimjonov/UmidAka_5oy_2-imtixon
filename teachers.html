@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="site-navbar">
+        <div class="navbar__wrap">
+            <div class="container">
+                <div class="navbar__herader">
+                    <a class="logo" href="./index.html">
+                        <img class="logo-img" src="./images/logo.svg" alt="">
+                    </a>
+                    <button class="navbar__btn"></button>
+                </div>
+            </div>
+            <div class="navbar__body">
+                <nav class="navbar__navigation">
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a class="navbar__link" href="./index.html">Xisobot</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--pupil" href="./students.html">O’quvchilar</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--group" href="./group.html">Guruhlar</a>
+                        </li>
+                        <li class="navbar__item active">
+                            <a class="navbar__link navbar__link--teachers " href="./teachers.html">O’qtuvchilar</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--subjects" href="./subjects.html">Fanlar</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="site-body">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header__wrap">
+                    <h1 class="site-header__title">O’qituvchilar</h1>
+                </div>
+            </div>
+        </header>
+        <main class="site-main__teachers teachers">
+            <div class="container">
+                <div class="teachders__wrap">
+                    <h2 class="students__title">Yangi o’qituvchi qo’shish</h2>
+                    <form class="students__add-form js-teachers-add-form">
+                        <label class="students__form-label">
+                            O'qituvchi ismi
+                            <input class="students__form-inp js-teacher-name" type="text" name="student_name" placeholder="Name" aria-label="enter student  name" required>
+                        </label>
+                        <label class="students__form-label">
+                            O'qituvchi familyasi
+                            <input class="students__form-inp js-teacher-surname" type="text" name="student_surname" placeholder="Surame" aria-label="enter student  surname" required>
+                        </label>
+                        <label class="students__form-label">
+                            Telefon raqami
+                            <input class="students__form-inp js-teacher-number" type="tel" name="student_phone" placeholder="phone" aria-label="enter student  phone" required>
+                        </label>
+                        <label class="students__form-label">
+                            O’quvchi yoshi
+                            <input class="students__form-inp js-teacher-age" type="number" name="student_age" placeholder="oquvchini yoshi" aria-label="enter student  age" required>
+                        </label>
+                        <label class="students__form-label">
+                            Yonalishi
+                            <select class="studdents__group js-teachers-subject" name="student_group" required aria-label="sellect student group">
+                                <option class="students__option" disabled hidden selected>Yonalishi</option>
+                            </select>
+                        </label>
+                        <label class="students__form-label">
+                            Rasm yuklash
+                            <input class="students__form-inp teachders__add-img" type="file" name="teacher_img" placeholder="oqituvchini yoshi" aria-label="enter teacher image" required>
+                        </label>
+                        <button class="subject__add-btn teachers__add-btn" type="submit">Qo'shish</button>
+                    </form>
+                    <div class="teachers__all-teachers">
+                        <div class="container">
+                            <div class="teachers__tabel-title-wrap">
+                                <h2 class="students__title teachers__title js-teachers-title">Bizning o’qtuvchilar</h2>
+                                <input class="search-inp js-search-teachers" type="search" name="user_search_group" placeholder="name" aria-label="enter your search group name">
+                            </div>
+                            <table class="teachers__tabel">
+                                <thead class="teachers__tabel-head">
+                                    <tr class="teachers__tabel-row">
+                                        <th class="teachers__tabel-bold">№</th>
+                                        <th class="teachers__tabel-bold">rasmi</th>
+                                        <th class="teachers__tabel-bold">O’qtuvchi ismi</th>
+                                        <th class="teachers__tabel-bold">Telefon nomer</th>
+                                        <th class="teachers__tabel-bold">Yo'nalish</th>
+                                        <th class="teachers__tabel-bold teachers__age">Yoshi</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="teachers__table-body">
+                                    <template class="teachers__temp">
+                                        <tr class="teachers__tabel-row">
+                                            <td class="teachers__table-info js-teacher-id">1</td>
+                                            <td class="teachers__table-info js-teacher-img"><img class="teachers__img" src="http://localhost:9090/img/1705068133697-2462015.png"></td>
+                                            <td class="teachers__table-info js-teacher-id-name js-teacher-name">Muqimjonov Ulug'bek</td>
+                                            <td class="teachers__table-info js-teacher-phone">997900676</td>
+                                            <td class="teachers__table-info js-teacher-subject">React</td>
+                                            <td class="teachers__age teachers__table-info">
+                                                <span class="js-teacher-age">19</span>
+                                                <div class="teachers__btn-wrap ">
+                                                     <lord-icon
+                                                     src="https://cdn.lordicon.com/zfzufhzk.json"
+                                                     trigger="hover"
+                                                     state="hover-line"
+                                                     class="js-teachers-edit"
+                                                     data-bs-toggle="modal"
+                                                     data-bs-target="#exampleModal"
+                                                     data-bs-whatever="@getbootstrap"
+                                                   >
+                                                   </lord-icon>
+                                                   <lord-icon
+                                                     class="js-teachers-delete"
+                                                     src="https://cdn.lordicon.com/xekbkxul.json"
+                                                     trigger="click"
+                                                     state="morph-trash-in"
+                                                   >
+                                                   </lord-icon>
+                                                </div>
+                                            </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">EDIT Teachers:</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form js-teacher-modal-form">
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control js-user-name" id="recipient-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Age:</label>
+                        <input class=" form-control js-user-age" type="number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Age:</label>
+                        <input class=" form-control js-user-img" type="file" required>
+                    </div>
+                    <button class="btn js-modal-btn" type="submit" data-bs-dismiss="modal">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+<script src="./js/functions.js"></script>
+<script src="./js/teachers.js"></script>
+</body>
+</html>
+

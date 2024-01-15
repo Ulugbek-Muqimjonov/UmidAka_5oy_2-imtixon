@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="site-navbar">
+        <div class="navbar__wrap">
+            <div class="container">
+                <div class="navbar__herader">
+                    <a class="logo" href="./index.html">
+                        <img class="logo-img" src="./images/logo.svg" alt="">
+                    </a>
+                    <button class="navbar__btn"></button>
+                </div>
+            </div>
+            <div class="navbar__body">
+                <nav class="navbar__navigation">
+                    <ul class="navbar__list">
+                        <li class="navbar__item active">
+                            <a class="navbar__link " href="./index.html">Xisobot</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--pupil" href="./students.html">O’quvchilar</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--group" href="./group.html">Guruhlar</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--teachers" href="./teachers.html">O’qtuvchilar</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link navbar__link--subjects" href="./subjects.html">Fanlar</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="site-body">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header__wrap">
+                    <h1 class="site-header__title">Hisobot</h1>
+                </div>
+            </div>
+        </header>
+        <main class="site-main">
+            <section class="site-main__hero hero">
+                <div class="container">
+                    <div class="hero__wrap">
+                        <!-- <h2 class="hero__subtitle">ABout</h2> -->
+                        <ul class="hero__list">
+                            <li class="hero__item">
+                                <div class="hero__item-nnerdiv">
+                                    <h3 class="hero__item-title">Jami o’quvchilar soni:</h3>
+                                    <strong class="hero__item-counter js-all-students">0 ta</strong>
+                                </div>
+                                <img class="hero__item-icon" src="./images/ststistic-icon.png" alt="statistic icon">
+                            </li>
+                            <li class="hero__item">
+                                <div class="hero__item-innerdiv">
+                                    <h3 class="hero__item-title">O’qituvchilar soni:</h3>
+                                    <strong class="hero__item-counter js-all-teachers">0 ta</strong>
+                                </div>
+                                <img class="hero__item-icon" src="./images/ststistic-icon.png" alt="statistic icon">
+                            </li>
+                            <li class="hero__item">
+                                <div class="hero__item-innerdiv">
+                                    <h3 class="hero__item-title">Jami fanlar soni:</h3>
+                                    <strong class="hero__item-counter js-all-subjects">0 ta</strong>
+                                </div>
+                                <img class="hero__item-icon" src="./images/ststistic-icon.png" alt="statistic icon">
+                            </li>
+                            <li class="hero__item">
+                                <div class="hero__item-innerdiv">
+                                    <h3 class="hero__item-title">Jami guruhlar soni</h3>
+                                    <strong class="hero__item-counter js-all-groups">0 ta</strong>
+                                </div>
+                                <img class="hero__item-icon" src="./images/ststistic-icon.png" alt="statistic icon">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer"></footer>
+    </div>
+    <script src="./js/functions.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
